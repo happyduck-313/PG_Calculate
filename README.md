@@ -14,6 +14,8 @@
 ---
 
 ## 🛠 如何运行（适合非程序员）
+参考[原文链接（CSDN 博客）](https://blog.csdn.net/m0_65482549/article/details/146441346?fromshare=blogdetail&sharetype=blogdetail&sharerId=146441346&sharerefer=PC&sharesource=qq_52254040&sharefrom=from_link)
+
 
 ### 1️⃣ 安装 PyCharm
 
@@ -42,10 +44,10 @@
 
 程序启动后：
 
-- 在界面中选择你想使用的计算模式（比如“□×□×□+□”）
-- 在右侧输入你想要的结果，例如 `30`
+- 在界面中选择你想使用的计算模式（比如“□×□×□-□”）
+- 在右侧输入你想要的结果，例如 `74`
 - 点击“提交”按钮
-- 程序会显示匹配的表达式，如：`2×3×5+0`
+- 程序会显示匹配的表达式，如：`2×5x8−6`
 
 ---
 
