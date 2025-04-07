@@ -17,6 +17,7 @@ expression_map = {
 }
 
 # 生成所有表达式组合
+# 生成所有表达式组合，确保每道题中每个数字只使用一次
 def generate_expressions():
     expr_db = []
     for a in range(1, 10):
@@ -24,17 +25,21 @@ def generate_expressions():
             for c in range(1, 10):
                 for d in range(1, 10):
                     for key, func in expression_map.items():
+                        num_placeholders = key.count("□")
+                        nums = [a, b, c, d][:num_placeholders]
+
+                        # 保证每个数字只能使用一次
+                        if len(set(nums)) < num_placeholders:
+                            continue
+
                         try:
                             result = func(a, b, c, d)
-                            if key.count("□") == 3:
-                                expr = key.replace("□", "{}").format(a, b, c)
-                                expr_db.append((key, result, expr))
-                            else:
-                                expr = key.replace("□", "{}").format(a, b, c, d)
-                                expr_db.append((key, result, expr))
+                            expr = key.replace("□", "{}").format(*nums)
+                            expr_db.append((key, result, expr))
                         except:
                             continue
     return expr_db
+
 
 database = generate_expressions()
 
