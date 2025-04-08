@@ -9,9 +9,9 @@
 
 如果你是macOS，请确保：
 
-`import tkinter
+` import tkinter
 
-print(tkinter.TkVersion)`
+print(tkinter.TkVersion) `
 
 得到的是8.6.8 以上的，如果是8.5 或 8.6.8 以下，请安装新版的Tcl/Tk
 
